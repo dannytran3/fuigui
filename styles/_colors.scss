@@ -1,0 +1,22 @@
+@use 'variables' as *;
+@use "sass:color";
+
+$colors: (
+    'primary': $primary,
+    'secondary': $secondary,
+    'accent': $accent,
+);
+
+@each $color, $value in $colors {
+    .text-#{$color} {
+        color: $value;
+    }
+
+    .bg-#{$color} {
+        background-color: $value;
+    }
+
+    .border-#{$color} {
+        border-color: $value;
+    }
+}

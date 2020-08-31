@@ -1,0 +1,46 @@
+@use 'variables' as *;
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.lined {
+    li {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid $secondary;
+        &:first-child {
+            padding-top: 0;
+        }
+    }
+}
+
+ul.spaced {
+    li {
+        padding-bottom: 1rem;
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+}
+
+ul.zebra {
+    li {
+        padding: 0.5rem;
+        &:nth-child(even) {
+            background-color: $accent-dark;
+        }
+    }
+}
+
+ul.hover-highlight {
+    li {
+        &:focus,
+        &:hover {
+            border-left: 0.25rem solid $accent;
+            padding-left: 0.75rem;
+        }
+    }
+}

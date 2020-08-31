@@ -1,0 +1,163 @@
+@use 'variables' as *;
+
+//
+// Display
+//
+
+$display: (
+    'block': block,
+    'inline-block': inline-block,
+    'inline': inline,
+    'flex': flex,
+    'inline-flex': inline-flex,
+    'grid': grid,
+    'inline-grid': inline-grid,
+    'hidden': none,
+) !default;
+
+@each $option, $value in $display {
+    .#{$option} {
+        display: $value;
+    }
+
+    @each $size, $px in $screens {
+        @media screen and (min-width: $px) {
+            .#{$size}\:#{$option} {
+                display: $value;
+            }
+        }
+    }
+}
+
+//
+// Flexbox
+//
+
+$flex-direction: (
+    'row': row,
+    'row-reverse': row-reverse,
+    'col': column,
+    'col-reverse': column-reverse,
+);
+
+@each $direction, $value in $flex-direction {
+    .flex-#{$direction} {
+        flex-direction: $value;
+    }
+
+    @each $size, $px in $screens {
+        @media screen and (min-width: $px) {
+            .#{$size}\:flex-#{$direction} {
+                flex-direction: $value;
+            }
+        }
+    }
+}
+
+$flex-wrap: (
+    'wrap': wrap,
+    'wrap-reverse': wrap-reverse,
+    'no-wrap': nowrap,
+);
+
+@each $wrap, $value in $flex-wrap {
+    .flex-#{$wrap} {
+        flex-wrap: $value;
+    }
+
+    @each $size, $px in $screens {
+        @media screen and (min-width: $px) {
+            .#{$size}\:flex-#{$wrap} {
+                flex-wrap: $value;
+            }
+        }
+    }
+}
+
+$flex-items: (
+    'start': flex-start,
+    'end': flex-end,
+    'center': center,
+    'baseline': baseline,
+    'stretch': stretch,
+);
+
+@each $alignment, $value in $flex-items {
+    .items-#{$alignment} {
+        align-items: $value;
+    }
+    @each $size, $px in $screens {
+        @media screen and (min-width: $px) {
+            .#{$size}\:items-#{$alignment} {
+                align-items: $value;
+            }
+        }
+    }
+}
+
+$flex-content: (
+    'center': center,
+    'start': flex-start,
+    'end': flex-end,
+    'between': space-between,
+    'around': space-around,
+);
+
+@each $alignment, $value in $flex-content {
+    .content-#{$alignment} {
+        align-content: $value;
+    }
+
+    .justify-#{$alignment} {
+        justify-content: $value;
+    }
+
+    @each $size, $px in $screens {
+        @media screen and (min-width: $px) {
+            .#{$size}\:content-#{$alignment} {
+                align-content: $value;
+            }
+        }
+    }
+
+    @each $size, $px in $screens {
+        @media screen and (min-width: $px) {
+            .#{$size}\:justify-#{$alignment} {
+                justify-content: $value;
+            }
+        }
+    }
+}
+
+.justify-evenly {
+    justify-content: space-evenly;
+}
+
+@each $size, $px in $screens {
+    @media screen and (min-width: $px) {
+        .#{$size}\:justify-evenly {
+            justify-content: space-evenly;
+        }
+    }
+}
+
+$flex: (
+    '1': 1 1 0%,
+    'auto': 1 1 auto,
+    'initial': 0 1 auto,
+    'none': none,
+);
+
+@each $item, $value in $flex {
+    .flex-#{$item} {
+        flex: $value;
+    }
+
+    @each $size, $px in $screens {
+        @media screen and (min-width: $px) {
+            .#{$size}\:flex-#{$item} {
+                flex: $value;
+            }
+        }
+    }
+}

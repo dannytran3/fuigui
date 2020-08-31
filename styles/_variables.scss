@@ -1,0 +1,14 @@
+$main: 164; // Hue, 0-360. 0 is red, 120 is green, 240 is blue
+$primary: hsl(0, 0%, 10%);
+$secondary: hsl($main, 25%, 95%);
+$accent: hsl($main, 68%, 56%);
+
+$accent-dark: hsl($main, 20%, 15%);
+
+$screens: (
+    'sm': '640px',
+    'md': '768px',
+    'lg': '1024px',
+    'xl': '1280px',
+    'xxl': '1440px',
+);
