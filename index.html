@@ -54,7 +54,6 @@
                     <div class="bg p-4">
                         <button class="btn btn--bw">Eject</button>
                         <button class="btn btn--accent">Button</button>
-                        <button class="btn btn--line" data-text="Button">Button</button>
                         <a href="http://" class="btn btn--bw">Link Button</a>
                     </div>
                 </div>
@@ -62,21 +61,21 @@
             <div class="flex-1 lined-x-corners m-4 p-8">
                 <h2 class="pb-2 mb-2 border-b border-2">Lists</h2>
                 <p>Lists by default have no padding, no margin and no bullet styles.</p>
-                <h4 class="pt-4 pb-2 mb-4 border-b">List</h4>
+                <h4 class="pt-8 pb-2 mb-4 border-b">List</h4>
                 <ul>
                     <li>Item</li>
                     <li>Item</li>
                     <li>Item</li>
                     <li>Item</li>
                 </ul>
-                <h4 class="pt-4 pb-2 mb-4 border-b">Zebra List</h4>
+                <h4 class="pt-8 pb-2 mb-4 border-b">Zebra List</h4>
                 <ul class="zebra hover-highlight">
                     <li>Item</li>
                     <li>Item</li>
                     <li>Item</li>
                     <li>Item</li>
                 </ul>
-                <h4 class="pt-4 pb-2 mb-4 border-b">Lined List</h4>
+                <h4 class="pt-8 pb-2 mb-4 border-b">Lined List</h4>
                 <ul class="lined">
                     <li>Item</li>
                     <li>Item</li>
@@ -99,8 +98,8 @@
             </div>
         </div>
         <div class="flex py-8 px-4">
-            <div class="flex-1 lined-x-corners m-4 p-8">
-                <div class="grid-pattern m-4 p-8">
+            <div class="flex-1 lined-x-corners m-4 p-4">
+                <div class="grid-pattern m-4 p-4">
                     <p>Lorem ipsum dolor sit amet, consectetur
                         adipisicing elit.
                         Facilis
@@ -112,6 +111,18 @@
                         minima!
                         Accusantium, asperiores.</p>
                 </div>
+                <div class="fui-accordion">
+                    <div class="fui-accordion--head">
+                        <div class="fui-accordion--title">
+                            <label for="accordion-1">Title 1</label>
+                            <span class="fui-accordion--close">&#10005;</span>
+                        </div>
+                        <hr />
+                    </div>
+                    <div id="accordion-1" class="fui-accordion--content">
+                        Hello
+                    </div>
+                </div>
             </div>
             <div class=" m-4 p-8">
                 <picture class="image-accent">
@@ -119,6 +130,40 @@
                     <img src="./assets/blade_runner_2049.JPG" alt="blade runner" />
                 </picture>
             </div>
+            <div class="flex-1">
+                <form action="/action_page.php">
+                    <label for="fname" class="block">First name:</label>
+                    <input type="text" id="fname" name="fname" value="John"><br>
+                    <label for="lname">Last name:</label><br>
+                    <input type="text" id="lname" name="lname" value="Doe"><br><br>
+
+                    <label class="fui-checkbox mb-4">One
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="fui-radio mb-4">One
+                        <input type="radio" checked="checked" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="fui-radio mb-4">Two
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="fui-radio mb-4">Three
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="fui-radio mb-4">Four
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <button type="submit" class="btn btn--bw">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="flex py-8 px-4">
+
         </div>
     </main>
 

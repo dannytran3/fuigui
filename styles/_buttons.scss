@@ -10,7 +10,7 @@
     cursor: pointer;
     font-family: Office Code Pro;
     text-transform: uppercase;
-    margin: 5px;
+
     &--bw {
         color: $secondary;
         background-color: transparent;
@@ -51,17 +51,6 @@
         }
         &:active {
             transform: translate(0, 0);
-        }
-    }
-
-    &--line {
-        color: $secondary;
-        background-color: transparent;
-        border: 1px solid color.adjust($secondary, $alpha: -0.8);
-        &:hover {
-            background-color: $accent;
-            color: $primary;
-            border: 1px solid $accent;
         }
     }
 }

@@ -1,5 +1,11 @@
 @use 'variables' as *;
 
+hr {
+    color: $secondary;
+    border-bottom: 0;
+    border-style: solid;
+}
+
 //
 // Display
 //

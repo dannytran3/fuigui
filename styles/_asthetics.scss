@@ -1,4 +1,5 @@
 @use 'variables' as *;
+@use 'mixins' as mixins;
 @use "sass:color";
 
 body {
@@ -70,35 +71,11 @@ body {
 }
 
 .lined-corners {
-    background-image: linear-gradient($secondary, $secondary),
-        linear-gradient($secondary, $secondary),
-        linear-gradient($secondary, $secondary),
-        linear-gradient($secondary, $secondary),
-        linear-gradient($secondary, $secondary),
-        linear-gradient($secondary, $secondary),
-        linear-gradient($secondary, $secondary),
-        linear-gradient($secondary, $secondary);
-    background-repeat: no-repeat;
-    background-size: 1px 20px, 20px 1px, 1px 20px, 20px 1px, 1px 20px, 20px 1px,
-        1px 20px, 20px 1px, 1px 20px;
-    background-position: left bottom, left bottom, right top, right top,
-        left top, left top, right bottom, right bottom;
+    @include mixins.border-corners($secondary, 1px, 20px);
 }
 
 .lined-x-corners {
-    background-image: linear-gradient($secondary, $secondary),
-        linear-gradient($secondary, $secondary),
-        linear-gradient($secondary, $secondary),
-        linear-gradient($secondary, $secondary),
-        linear-gradient($secondary, $secondary),
-        linear-gradient($secondary, $secondary),
-        linear-gradient($secondary, $secondary),
-        linear-gradient($secondary, $secondary);
-    background-repeat: no-repeat;
-    background-size: 1px 20px, 50% 1px, 1px 20px, 50% 1px, 1px 20px, 50% 1px,
-        1px 20px, 50% 1px, 1px 20px;
-    background-position: left bottom, left bottom, right top, right top,
-        left top, left top, right bottom, right bottom;
+    @include mixins.border-corners($secondary, 1px, 20px, 1px, 50%);
 }
 
 .grid-pattern {
@@ -114,58 +91,6 @@ body {
             transparent 22px
         );
     background-size: 100% 22px, 22px 100%;
-}
-
-.glitch {
-    position: relative;
-}
-
-.glitch::before,
-.glitch::after {
-    color: white;
-    content: attr(data-text);
-    position: absolute;
-    overflow: hidden;
-}
-
-.glitch::before {
-    left: -2px;
-    text-shadow: -2px 0 red;
-    animation-name: glitch-animation-1;
-    animation-duration: 2s;
-    animation-timing-function: linear;
-    animation-delay: 0s;
-    animation-iteration-count: infinite;
-    animation-direction: reverse-alternate;
-}
-
-.glitch::after {
-    left: -3px;
-    text-shadow: -2px 0 blue;
-    animation-name: glitch-animation-2;
-    animation-duration: 2s;
-    animation-timing-function: linear;
-    animation-delay: 0s;
-    animation-iteration-count: infinite;
-    animation-direction: reverse-alternate;
-}
-
-@keyframes glitch-animation-1 {
-    $steps: 20;
-    @for $i from 0 through $steps {
-        #{percentage($i*(1/$steps))} {
-            clip: rect(random(150) + px, 350px, random(150) + px, 10px);
-        }
-    }
-}
-
-@keyframes glitch-animation-2 {
-    $steps: 20;
-    @for $i from 0 through $steps {
-        #{percentage($i*(1/$steps))} {
-            clip: rect(random(150) + px, 350px, random(150) + px, 0px);
-        }
-    }
 }
 
 .image-accent {

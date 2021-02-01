@@ -1,0 +1,16 @@
+// mixin for creating bordered
+// useage: @include border-corners(color, x, y, ...optional)
+// optional arguments are for finer control of x and y values
+
+@mixin border-corners($color, $x, $y, $x1: $x, $y1: $y, $x2: $x, $y2: $y) {
+    background-image: linear-gradient($color, $color),
+        linear-gradient($color, $color), linear-gradient($color, $color),
+        linear-gradient($color, $color), linear-gradient($color, $color),
+        linear-gradient($color, $color), linear-gradient($color, $color),
+        linear-gradient($color, $color);
+    background-repeat: no-repeat;
+    background-size: $x1 $y2, $y1 $x2, $x1 $y2, $y1 $x2, $x1 $y2, $y1 $x2,
+        $x1 $y2, $y1 $x2, $x1 $y2;
+    background-position: left bottom, left bottom, right top, right top,
+        left top, left top, right bottom, right bottom;
+}

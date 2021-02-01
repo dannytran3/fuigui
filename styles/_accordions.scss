@@ -1,0 +1,82 @@
+@use 'variables' as *;
+@use 'mixins' as mixins;
+@use "sass:color";
+
+.fui-accordion {
+    label {
+        color: $secondary;
+    }
+
+    &--head {
+        position: relative;
+    }
+
+    &--title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 0;
+        cursor: pointer;
+
+        &:hover {
+            .fui-accordion--close {
+                color: $accent;
+            }
+        }
+    }
+
+    &--close {
+        user-select: none;
+        transform: rotate(-45deg);
+        transition: 300ms transform, color ease-in-out;
+    }
+
+    hr {
+        border: 0;
+        border-bottom: 1px solid $secondary;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        z-index: -1;
+        transition: 300ms transform, color ease-in-out;
+    }
+
+    &--content {
+        display: none;
+    }
+
+    /* When accordion is open */
+    &.open {
+        animation-delay: 300ms;
+        animation-fill-mode: both;
+        animation-duration: 150ms;
+        animation-iteration-count: 2;
+        animation-name: flickin;
+
+        .fui-accordion--close {
+            transform: rotate(0);
+            color: $danger;
+        }
+
+        hr {
+            transform: translateY(-100%);
+        }
+
+        .fui-accordion--content {
+            display: block;
+            padding: 1rem;
+        }
+    }
+}
+
+@keyframes flickin {
+    from {
+        box-shadow: 0;
+    }
+
+    to {
+        box-shadow: 0 0 0 1px $secondary;
+    }
+}
