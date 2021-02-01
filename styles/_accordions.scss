@@ -3,6 +3,8 @@
 @use "sass:color";
 
 .fui-accordion {
+    transition: padding 300ms ease-in-out;
+
     label {
         color: $secondary;
     }
@@ -15,7 +17,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0.5rem 0;
         cursor: pointer;
 
         &:hover {
@@ -31,52 +32,62 @@
         transition: 300ms transform, color ease-in-out;
     }
 
-    hr {
-        border: 0;
-        border-bottom: 1px solid $secondary;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        z-index: -1;
-        transition: 300ms transform, color ease-in-out;
-    }
-
     &--content {
+        // transition: <property> <duration> <timing-function> <delay>;
+        transition: all 800ms ease-in-out 300ms;
         display: none;
+        // opacity: 0;
+        // visibility: hidden;
     }
 
-    /* When accordion is open */
+    /* Class 'open' is added to the 'fui-accordion' element upon click*/
     &.open {
         animation-delay: 300ms;
         animation-fill-mode: both;
-        animation-duration: 150ms;
-        animation-iteration-count: 2;
+        animation-duration: 600ms;
         animation-name: flickin;
+        padding: 1rem;
 
         .fui-accordion--close {
             transform: rotate(0);
             color: $danger;
         }
 
-        hr {
-            transform: translateY(-100%);
+        .fui-accordion--head {
+            margin-bottom: 1rem;
         }
 
         .fui-accordion--content {
             display: block;
-            padding: 1rem;
+            opacity: 1;
+            visibility: visible;
         }
     }
 }
 
 @keyframes flickin {
     from {
-        box-shadow: 0;
+        outline: 0;
+        animation-timing-function: ease-in-out;
+    }
+
+    80% {
+        outline: 1px solid $secondary;
+    }
+
+    85% {
+        outline: 0;
+    }
+
+    90% {
+        outline: 1px solid $secondary;
+    }
+
+    95% {
+        outline: 0;
     }
 
     to {
-        box-shadow: 0 0 0 1px $secondary;
+        outline: 1px solid $secondary;
     }
 }
