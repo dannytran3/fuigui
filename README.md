@@ -6,6 +6,22 @@ This project attempts to be a CSS framework with minimal dependancies. It adopts
 
 ## Install
 
+Have parcel installed before you begin :
+
+Yarn:
+```shell
+yarn global add parcel-bundler 
+```
+
+-- or --
+
+npm:
+```shell
+npm install -g parcel-bundler 
+```
+
+-- then --
+
 ```
 npm install
 parcel index.html

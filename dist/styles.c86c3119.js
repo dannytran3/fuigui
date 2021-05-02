@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"C:/Users/Danny/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+})({"../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -149,7 +149,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],"C:/Users/Danny/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+},{}],"../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -184,12 +184,12 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"C:/Users/Danny/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"styles/styles.scss":[function(require,module,exports) {
+},{"./bundle-url":"../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"styles/styles.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./fonts\\ShareTechMono-Regular.ttf":[["ShareTechMono-Regular.365dc586.ttf","styles/fonts/ShareTechMono-Regular.ttf"],"styles/fonts/ShareTechMono-Regular.ttf"],"./fonts\\routed-gothic.ttf":[["routed-gothic.1910f463.ttf","styles/fonts/routed-gothic.ttf"],"styles/fonts/routed-gothic.ttf"],"./fonts\\OfficeCodePro-Regular.woff2":[["OfficeCodePro-Regular.9e800ce3.woff2","styles/fonts/OfficeCodePro-Regular.woff2"],"styles/fonts/OfficeCodePro-Regular.woff2"],"./fonts\\OfficeCodePro-Regular.woff":[["OfficeCodePro-Regular.f5c7a741.woff","styles/fonts/OfficeCodePro-Regular.woff"],"styles/fonts/OfficeCodePro-Regular.woff"],"./fonts\\OfficeCodePro-Regular.ttf":[["OfficeCodePro-Regular.26b1c49a.ttf","styles/fonts/OfficeCodePro-Regular.ttf"],"styles/fonts/OfficeCodePro-Regular.ttf"],"./fonts\\OfficeCodePro-Medium.woff2":[["OfficeCodePro-Medium.05426371.woff2","styles/fonts/OfficeCodePro-Medium.woff2"],"styles/fonts/OfficeCodePro-Medium.woff2"],"./fonts\\OfficeCodePro-Medium.woff":[["OfficeCodePro-Medium.3021d21c.woff","styles/fonts/OfficeCodePro-Medium.woff"],"styles/fonts/OfficeCodePro-Medium.woff"],"./fonts\\OfficeCodePro-Medium.ttf":[["OfficeCodePro-Medium.345f2b23.ttf","styles/fonts/OfficeCodePro-Medium.ttf"],"styles/fonts/OfficeCodePro-Medium.ttf"],"./fonts\\OfficeCodePro-MediumItalic.woff2":[["OfficeCodePro-MediumItalic.c8cdbb84.woff2","styles/fonts/OfficeCodePro-MediumItalic.woff2"],"styles/fonts/OfficeCodePro-MediumItalic.woff2"],"./fonts\\OfficeCodePro-MediumItalic.woff":[["OfficeCodePro-MediumItalic.2c8df138.woff","styles/fonts/OfficeCodePro-MediumItalic.woff"],"styles/fonts/OfficeCodePro-MediumItalic.woff"],"./fonts\\OfficeCodePro-MediumItalic.ttf":[["OfficeCodePro-MediumItalic.ca892159.ttf","styles/fonts/OfficeCodePro-MediumItalic.ttf"],"styles/fonts/OfficeCodePro-MediumItalic.ttf"],"./fonts\\OfficeCodePro-Bold.woff2":[["OfficeCodePro-Bold.dac473cf.woff2","styles/fonts/OfficeCodePro-Bold.woff2"],"styles/fonts/OfficeCodePro-Bold.woff2"],"./fonts\\OfficeCodePro-Bold.woff":[["OfficeCodePro-Bold.ac00d2db.woff","styles/fonts/OfficeCodePro-Bold.woff"],"styles/fonts/OfficeCodePro-Bold.woff"],"./fonts\\OfficeCodePro-Bold.ttf":[["OfficeCodePro-Bold.171ea7a1.ttf","styles/fonts/OfficeCodePro-Bold.ttf"],"styles/fonts/OfficeCodePro-Bold.ttf"],"./fonts\\OfficeCodePro-BoldItalic.woff2":[["OfficeCodePro-BoldItalic.a8d9f52d.woff2","styles/fonts/OfficeCodePro-BoldItalic.woff2"],"styles/fonts/OfficeCodePro-BoldItalic.woff2"],"./fonts\\OfficeCodePro-BoldItalic.woff":[["OfficeCodePro-BoldItalic.9f90a982.woff","styles/fonts/OfficeCodePro-BoldItalic.woff"],"styles/fonts/OfficeCodePro-BoldItalic.woff"],"./fonts\\OfficeCodePro-BoldItalic.ttf":[["OfficeCodePro-BoldItalic.2db20ee0.ttf","styles/fonts/OfficeCodePro-BoldItalic.ttf"],"styles/fonts/OfficeCodePro-BoldItalic.ttf"],"./fonts\\PublicSans-VariableFont_wght.ttf":[["PublicSans-VariableFont_wght.274ec5e9.ttf","styles/fonts/PublicSans-VariableFont_wght.ttf"],"styles/fonts/PublicSans-VariableFont_wght.ttf"],"./..\\assets\\img-noise-400x400.png":[["img-noise-400x400.108922f2.png","assets/img-noise-400x400.png"],"assets/img-noise-400x400.png"],"_css_loader":"C:/Users/Danny/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"C:/Users/Danny/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./fonts/ShareTechMono-Regular.ttf":[["ShareTechMono-Regular.365dc586.ttf","styles/fonts/ShareTechMono-Regular.ttf"],"styles/fonts/ShareTechMono-Regular.ttf"],"./fonts/routed-gothic.ttf":[["routed-gothic.1910f463.ttf","styles/fonts/routed-gothic.ttf"],"styles/fonts/routed-gothic.ttf"],"./fonts/OfficeCodePro-Regular.woff2":[["OfficeCodePro-Regular.9e800ce3.woff2","styles/fonts/OfficeCodePro-Regular.woff2"],"styles/fonts/OfficeCodePro-Regular.woff2"],"./fonts/OfficeCodePro-Regular.woff":[["OfficeCodePro-Regular.f5c7a741.woff","styles/fonts/OfficeCodePro-Regular.woff"],"styles/fonts/OfficeCodePro-Regular.woff"],"./fonts/OfficeCodePro-Regular.ttf":[["OfficeCodePro-Regular.26b1c49a.ttf","styles/fonts/OfficeCodePro-Regular.ttf"],"styles/fonts/OfficeCodePro-Regular.ttf"],"./fonts/OfficeCodePro-Medium.woff2":[["OfficeCodePro-Medium.05426371.woff2","styles/fonts/OfficeCodePro-Medium.woff2"],"styles/fonts/OfficeCodePro-Medium.woff2"],"./fonts/OfficeCodePro-Medium.woff":[["OfficeCodePro-Medium.3021d21c.woff","styles/fonts/OfficeCodePro-Medium.woff"],"styles/fonts/OfficeCodePro-Medium.woff"],"./fonts/OfficeCodePro-Medium.ttf":[["OfficeCodePro-Medium.345f2b23.ttf","styles/fonts/OfficeCodePro-Medium.ttf"],"styles/fonts/OfficeCodePro-Medium.ttf"],"./fonts/OfficeCodePro-MediumItalic.woff2":[["OfficeCodePro-MediumItalic.c8cdbb84.woff2","styles/fonts/OfficeCodePro-MediumItalic.woff2"],"styles/fonts/OfficeCodePro-MediumItalic.woff2"],"./fonts/OfficeCodePro-MediumItalic.woff":[["OfficeCodePro-MediumItalic.2c8df138.woff","styles/fonts/OfficeCodePro-MediumItalic.woff"],"styles/fonts/OfficeCodePro-MediumItalic.woff"],"./fonts/OfficeCodePro-MediumItalic.ttf":[["OfficeCodePro-MediumItalic.ca892159.ttf","styles/fonts/OfficeCodePro-MediumItalic.ttf"],"styles/fonts/OfficeCodePro-MediumItalic.ttf"],"./fonts/OfficeCodePro-Bold.woff2":[["OfficeCodePro-Bold.dac473cf.woff2","styles/fonts/OfficeCodePro-Bold.woff2"],"styles/fonts/OfficeCodePro-Bold.woff2"],"./fonts/OfficeCodePro-Bold.woff":[["OfficeCodePro-Bold.ac00d2db.woff","styles/fonts/OfficeCodePro-Bold.woff"],"styles/fonts/OfficeCodePro-Bold.woff"],"./fonts/OfficeCodePro-Bold.ttf":[["OfficeCodePro-Bold.171ea7a1.ttf","styles/fonts/OfficeCodePro-Bold.ttf"],"styles/fonts/OfficeCodePro-Bold.ttf"],"./fonts/OfficeCodePro-BoldItalic.woff2":[["OfficeCodePro-BoldItalic.a8d9f52d.woff2","styles/fonts/OfficeCodePro-BoldItalic.woff2"],"styles/fonts/OfficeCodePro-BoldItalic.woff2"],"./fonts/OfficeCodePro-BoldItalic.woff":[["OfficeCodePro-BoldItalic.9f90a982.woff","styles/fonts/OfficeCodePro-BoldItalic.woff"],"styles/fonts/OfficeCodePro-BoldItalic.woff"],"./fonts/OfficeCodePro-BoldItalic.ttf":[["OfficeCodePro-BoldItalic.2db20ee0.ttf","styles/fonts/OfficeCodePro-BoldItalic.ttf"],"styles/fonts/OfficeCodePro-BoldItalic.ttf"],"./fonts/PublicSans-VariableFont_wght.ttf":[["PublicSans-VariableFont_wght.274ec5e9.ttf","styles/fonts/PublicSans-VariableFont_wght.ttf"],"styles/fonts/PublicSans-VariableFont_wght.ttf"],"./../assets/img-noise-400x400.png":[["img-noise-400x400.108922f2.png","assets/img-noise-400x400.png"],"assets/img-noise-400x400.png"],"_css_loader":"../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "7084" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49853" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -393,5 +393,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["C:/Users/Danny/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
+},{}]},{},["../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
 //# sourceMappingURL=/styles.c86c3119.js.map
