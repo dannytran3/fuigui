@@ -1,0 +1,55 @@
+@use 'variables' as *;
+@use 'mixins' as mixins;
+@use "sass:color";
+
+.flick-in {
+    animation-delay: 300ms;
+    animation-fill-mode: both;
+    animation-duration: 600ms;
+    animation-name: flickin;
+}
+
+@keyframes flickIn {
+    from {
+        outline: 0;
+        animation-timing-function: ease-in-out;
+    }
+
+    80% {
+        outline: 1px solid darken($secondary, 40%);
+    }
+
+    85% {
+        outline: 0;
+    }
+
+    90% {
+        outline: 1px solid $secondary;
+    }
+
+    95% {
+        outline: 0;
+    }
+
+    to {
+        outline: 1px solid $secondary;
+    }
+}
+
+.fade-in {
+    animation-delay: 400ms;
+    animation-fill-mode: both;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in-out;
+    animation-name: fadeIn;
+}
+
+@keyframes fadeIn {
+    from {
+      outline: 1px solid transparent;
+    }
+  
+    to {
+      outline: 1px solid $secondary;
+    }
+}

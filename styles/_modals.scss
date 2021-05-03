@@ -1,0 +1,67 @@
+@use 'variables' as *;
+@use 'mixins' as mixins;
+@use "sass:color";
+
+.fui-modal {
+    background-color: $primary;
+    padding: 1rem;
+    @include mixins.border-corners($secondary, 1px, 20px);
+
+    &__background {
+        display: none;
+    }
+
+    &__content {
+        transition: opacity 300ms ease-in-out 3500ms;
+        opacity: 0;
+    }
+}
+
+.fui-modal__background.open {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba($color: #000000, $alpha: .6);
+    background-image: linear-gradient(
+                transparent 21px,
+                rgba(220, 220, 200, 0.3) 22px,
+                transparent 22px
+            ),
+            linear-gradient(
+                90deg,
+                transparent 21px,
+                rgba(220, 220, 200, 0.3) 22px,
+                transparent 22px
+            );
+    background-size: 100% 60px, 60px 100%;
+
+    .fui-modal {
+        animation-name: heightScale;
+        animation-delay: 500ms;
+        animation-fill-mode: both;
+        animation-duration: 3s;
+        max-height: 0;
+    }
+
+    .fui-modal__content {
+        opacity: 1;
+
+    }
+
+}
+
+
+@keyframes heightScale {
+    from {
+        max-height: 0;
+    }
+    
+    to {
+        max-height: 1000px;
+    }
+}

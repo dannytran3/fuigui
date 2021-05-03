@@ -97,7 +97,7 @@
                     Accusantium, asperiores.</p>
             </div>
         </div>
-        <div class="flex py-8 px-4">
+        <div class="lg:flex py-8 px-4">
             <div class="flex-1 lined-x-corners m-4 p-4">
                 <div class="grid-pattern m-4 p-4">
                     <p>Lorem ipsum dolor sit amet, consectetur
@@ -125,10 +125,16 @@
                 </div>
             </div>
             <div class=" m-4 p-8">
-                <picture class="image-accent">
-                    <source srcset="./assets/blade_runner_2049.JPG" media="(min-width: 800px)">
-                    <img src="./assets/blade_runner_2049.JPG" alt="blade runner" />
-                </picture>
+                <div class="flex">
+                    <picture class="image-accent mr-8">
+                        <source srcset="./assets/blade_runner_2049.JPG" media="(min-width: 800px)">
+                        <img src="./assets/blade_runner_2049.JPG" alt="blade runner" />
+                    </picture>
+                    <picture class="image-accent--offset">
+                        <source srcset="./assets/blade_runner_2049.JPG" media="(min-width: 800px)">
+                        <img src="./assets/blade_runner_2049.JPG" alt="blade runner" />
+                    </picture>
+                </div>
             </div>
             <div class="flex-1">
                 <form action="/action_page.php">
@@ -163,7 +169,14 @@
             </div>
         </div>
         <div class="flex py-8 px-4">
-
+            <button class="fui-modal-trigger btn btn--bw" data-modal-target="modal-1">Modal 1</button>
+            <div id="modal-1" class="fui-modal__background">
+                <div class="fui-modal">
+                    <div class="fui-modal__content">
+                        <h2>Jerry Hello</h2>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
