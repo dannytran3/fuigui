@@ -36,7 +36,7 @@
     }
 }
 
-.fade-in {
+.fade-border-in {
     animation-delay: 400ms;
     animation-fill-mode: both;
     animation-duration: 500ms;
@@ -44,7 +44,7 @@
     animation-name: fadeIn;
 }
 
-@keyframes fadeIn {
+@keyframes fadeBorderIn {
     from {
       outline: 1px solid transparent;
     }

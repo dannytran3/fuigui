@@ -54,3 +54,13 @@
         }
     }
 }
+
+.close {
+    border: none;
+    background-color: transparent;
+    color: $secondary;
+    &:hover {
+        color: $danger;
+        cursor: pointer;
+    }
+}
